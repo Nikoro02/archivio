@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taglia di Dorry</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.postimg.cc/6pshKy02/Screenshot-2025-09-19-174622.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin: 20px 0 10px 0;
+    /* text-shadow rimosso */
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh; /* usa tutta l'altezza senza togliere 140px */
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centra verticalmente */
+    padding: 0; /* rimuove padding */
+    box-sizing: border-box;
+}
+
+.container img {
+    width: 100%;
+    max-height: 85vh; /* altezza massima di default */
+    object-fit: contain;
+    border-radius: 12px;
+    border: 0; /* niente bordo */
+    transition: transform 0.5s;
+}
+
+/* Immagine attiva generica */
+.container img.active {
+    transform: scale(1.05); /* leggero ingrandimento */
+}
+
+/* Seconda immagine */
+.slide:nth-child(2) img {
+    max-height: 80vh; /* ridotta da 95vh a 80vh */
+    transform: scale(1.05); /* leggero ingrandimento, opzionale */
+}
+.caption {
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    /* text-shadow rimosso */
+}
+
+.paginatore {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    /* box-shadow rimosso */
+    transition: transform 0.2s;
+}
+
+.paginatore button:hover {
+    transform: scale(1.1);
+    /* box-shadow rimosso */
+}
+</style>
+</head>
+<body>
+
+<h1>Taglia di Dorry</h1>
+
+<div class="carousel" id="carousel">
+
+    <!-- Slide 1 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/63ctw0Qp/Screenshot-2025-09-19-175958.png" alt="Volume 1">
+            <div class="caption">Prima Taglia, capitolo 118 = 100'000'000</div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/Sxt8rZjb/Screenshot-2025-09-19-222803.png" alt="Volume 2">
+            <div class="caption">Seconda Taglia, capitolo 1030 = 1'800'000'000</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+
+    slides.forEach((slide, i) => {
+        const img = slide.querySelector('img');
+        if(i === index) {
+            img.classList.add('active');
+        } else {
+            img.classList.remove('active');
+        }
+    });
+
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+
+showSlide(0);
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pugno 2 = granchio e ricerca di lavoro</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.postimg.cc/7LbPfrgV/Screenshot-2025-09-16-203407.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100vh - 120px);
+    padding-bottom: 20px;
+}
+
+/* Nasconde la barra di scorrimento */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; /* altezza schermo */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* immagine e descrizione affiancate */
+    gap: 20px;
+    align-items: center;
+    max-width: 90%;
+}
+
+.container img {
+    height: 80vh; /* immagine alta quasi quanto la finestra */
+    width: auto;  /* mantiene proporzioni */
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(255,255,255,0.7);
+}
+
+.descrizione {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Prima immagine più grande */
+.slide:first-child .container img {
+    width: 600px;
+}
+
+/* Immagine slide 12 più grande */
+.slide:nth-child(12) .container img {
+    width: 550px;
+}
+
+/* Terzultima immagine (Slide 15) più grande */
+.slide:nth-last-child(3) .container img {
+    width: 550px;
+}
+
+/* Penultima immagine (Slide 16) più grande */
+.slide:nth-last-child(2) .container img {
+    width: 550px;
+}
+
+
+
+.paginatore {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.paginatore button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body>
+
+<h1>Pugno 2 = Granchio e ricerca di lavoro</title>
+
+<div class="carousel" id="carousel">
+    <!-- Slide 1 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/Dyf92dQQ/Screenshot-2025-09-16-203730.png" alt="slide 1">
+            <p class="descrizione">Torniamo a 3 anni fa, un giovane impiegato si ritrova davanti un mostro-granchio.<br>
+			Egli si sorprende che lui non scappa via nonostante l'orribile visione. <br>
+        </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/g0TYFtLT/Screenshot-2025-09-16-211210.png" alt="Slide 2">
+            <p class="descrizione">L'esplosione prende una grande parte di città e crea un cratere enorme.</p>
+        </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/t4S08qHR/Screenshot-2025-09-15-160853.png" alt="Slide 3">
+            <p class="descrizione">L'artecife di questo disastro è un mostro con le antenne assomigliante a Piccolo di Dragon Ball.</p>
+        </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/9fY9cnJf/Screenshot-2025-09-15-161117.png" alt="Slide 4">
+            <p class="descrizione">Il mostro continua la sua distruzione lanciando 4 palle laser distruttrici.</p>
+        </div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/0yTR08Rz/Screenshot-2025-09-15-161714.png" alt="Slide 5">
+            <p class="descrizione">Alla pc un lavoratore, tramite il telegiornale, afferma che ci sono terremoti dappertutto. In tutta la città ci sono enormi esplosioni. Il pc poi smette di funzionare e il proprietario di esso afferma che è il momento di andare.</p>
+        </div>
+    </div>
+    <!-- Slide 6 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/wqs5r9K6/Screenshot-2025-09-15-163223.png" alt="Slide 6">
+            <p class="descrizione">E' un supereroe pelato.</p>
+        </div>
+    </div>
+    <!-- Slide 7 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/j5zMYbFk/Screenshot-2025-09-15-163619.png" alt="Slide 7">
+            <p class="descrizione">Una bambina, ormai divenuta orfana, si mette a piangere. Il mostro la sente e l'addocchia.</p>
+        </div>
+    </div>
+    <!-- Slide 8 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/1sLKpgbv/Screenshot-2025-09-15-163845.png" alt="Slide 8">
+            <p class="descrizione">La bambina non si accorge di lui ed esso sta per ucciderla.</p>
+        </div>
+    </div>
+    <!-- Slide 9 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/mgpL7xVq/Screenshot-2025-09-15-164050.png" alt="Slide 9">
+            <p class="descrizione">La sua stretta fatale sta per ucciderla ma viene salvata all'ultimo dall'eroe pelato.</p>
+        </div>
+    </div>
+    <!-- Slide 10 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/j22vw7jB/Screenshot-2025-09-15-164358.png" alt="Slide 10">
+            <p class="descrizione">Il mostro rimane di stucco.</p>
+        </div>
+    </div>
+    <!-- Slide 11 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/RCYLpqhV/Screenshot-2025-09-15-164640.png" alt="Slide 11">
+            <p class="descrizione">Il mostro gli chiede chi lui sia.</p>
+        </div>
+    </div>
+    <!-- Slide 12 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/RZ4dKyqc/Screenshot-2025-09-15-164922.png" alt="Slide 12">
+            <p class="descrizione">Lui è un ragazzo che fa l'eroe per hobby.</p>
+        </div>
+    </div>
+    <!-- Slide 13 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/fTjjzC5k/Screenshot-2025-09-15-165038.png" alt="Slide 13">
+            <p class="descrizione">Il mostro si arrabbia. Lui è nato dal continuo inquinamento causato dall'uomo: è <b>Vaccine Man</b>. Incolpa gli esseri umani di stare uccidendo la Terra.</p>
+        </div>
+    </div>
+    <!-- Slide 14 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/k7WX5ZxT/Screenshot-2025-09-15-165411.png" alt="Slide 14">
+            <p class="descrizione">Lui è nato per dissipare la razza umana e si infuria con il ragazzo che si oppone alla natura solo per "hobby".</p>
+        </div>
+    </div>
+    <!-- Slide 15 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/C1c5rZ4h/Screenshot-2025-09-15-165729.png" alt="Slide 15">
+            <p class="descrizione">Vaccine Man si trasforma nella sua presunta forma finale e si prepara ad attaccarlo, volenteroso di uccidere tutti gli esseri umani.</p>
+        </div>
+    </div>
+    <!-- Slide 16 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/SRVPM4qt/Screenshot-2025-09-15-170028.png" alt="Slide 16">
+            <p class="descrizione">Il supereroe uccide Vaccine Man con un singolo pugno.</p>
+        </div>
+    </div>
+    <!-- Slide 17 -->
+    <div class="slide">
+        <div class="container">
+            <img src="https://i.postimg.cc/gjwhvqPF/Screenshot-2025-09-15-170201.png" alt="Slide 17">
+            <p class="descrizione">Il supereroe si lamenta di aver concluso l'ennesimo scontro con un solo pugno.</p>
+        </div>
+    </div>
+</div>
+
+<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+</script>
+
+</body>
+</html>

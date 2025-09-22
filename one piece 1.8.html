@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Capitolo 8 - Nami sale sul palco</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url("https://i.postimg.cc/x82WwBsX/Screenshot-2025-09-12-105125.png");
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+      background-color: black;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1.titolo {
+      color: white;
+      text-align: center;
+      font-size: 50px;
+      margin: 20px 0;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: hidden; /* tolta la barra bianca */
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      height: calc(100vh - 140px);
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      max-width: 90%;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      margin: 0 auto;
+      flex-wrap: wrap; /* per adattarsi alle immagini grandi */
+      justify-content: center;
+    }
+
+    .container img {
+      max-width: 100%;       
+      max-height: 80vh;      
+      object-fit: contain;   
+      border-radius: 10px;
+    }
+
+    .descrizione {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #f0f0f0;
+      max-width: 400px;
+      margin: 0;
+    }
+
+    .paginatore {
+      text-align: center;
+      margin: 15px;
+    }
+    .paginatore button {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .paginatore button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="titolo">Capitolo 8 = Nami sale sul palco</h1>
+
+  <div class="carousel" id="carousel">
+    <!-- Slide 1 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/2593G7Sb/Screenshot-2025-09-12-105500.png">
+        <p class="descrizione">
+          Il narratore afferma: <br>
+          <b>La Grande era della Pirateria</b>
+          Un'epoca fervente e tumultuosa che ruota attorno al tesoro definitivo, che si dice "colleghi tutto come uno" – il "One Piece" – lasciato dall'unico uomo nella storia ad essere chiamato il "Re dei Pirati": Gold Roger.<br>
+          Fu un'epoca in cui innumerevoli pirati issarono le loro bandiere, combatterono e si fecero un nome...
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/PNsrRdc0/Screenshot-2025-09-12-105951.png">
+        <p class="descrizione">
+          Luffy e Zoro continuano il loro viaggio, Zoro ha fame.<br>
+          Zolo chiede a Luffy se non trovi strano che lui non riesca a navigare. Luffy gli risponde che il caso lo ha aiutato sempre.<br>
+          Il ragazzo di gomma si sorprende di ciò visto che pensava che il ragazzo dai capelli verdi fosse un cacciatore di taglie errante.<br>
+          Zolo gli spiega che lui ha iniziato il viaggio alla ricerca di un certo uomo ma ha poi perso la via per il vullaggio.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/bwdvq4YJ/Screenshot-2025-09-12-190616.png">
+        <p class="descrizione">
+          Quindi, per guadagnare da vivere, ha iniziato a cacciare pirati e fare soldi. Luffy commenta evidenziando come praticament Zolo si sia perso.<br>
+          Zolo, cercando di cambiare discorso, afferma che navigando a caso non arriveranno mai alla Grand Line e che quindi devono reclutare un navigatore.<br>
+          Luffy aggiunge che servono anche un cuoco,un musicista ma il suo elenco viene interroto dal suo compagno che urla.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/nH7c1yz4/Screenshot-2025-09-12-191134.png">
+        <p class="descrizione">
+          I due stanno morendo di fame ma Luffy avvista un uccello molto grande.<br>
+          Luffy decude di andare a cuttarlo lanciandosi tramite il <b>GUM GUM ROCKET</b>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/jj7SB9t7/Screenshot-2025-09-12-191407.png">
+        <p class="descrizione">
+          Luffy rimane intrappolato nella bocca dell uccello e Zolo inizia ad inseguirlo remando.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/rpHtrbNn/Screenshot-2025-09-12-191626.png">
+        <p class="descrizione">
+          Mentre Zolo rema verso Luffy si ritrova dei naufragi che stanno anngenando.<br>
+          Essi si aggrappano alla nave mentre lui continua a remare.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/pVkS8JFN/Screenshot-2025-09-12-192024.png">
+        <p class="descrizione">
+          Zolo si complimenta con loro per essere riusciti a salire sulla nave.<br>
+          Dopo essersi ripresi loro si rilevano essere dei pirati della ciurma di Buggy, minacciandolo.<br>
+          Zolo non rimane lontanamente intimorito.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/xdGdP1H4/Screenshot-2025-09-12-192427.png">
+        <p class="descrizione">
+          I 3 pirati vengono picchiati: non si rendono conto di aver davanti il cacciatore di pirati.<br>
+          Zolo afferma che per colpa dei loro giochi ha perso di vista Luffy e li intima di remare più veloce possibile.<br>
+          Zolo poi gli chiede come è possibile che dei pirati sono finiti naufraghi.<br>
+          I 3 rispondono che è tutta colpa di una donna.<br>
+          Uno di loro afferma che è molto carina.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/6qsJbDZ1/Screenshot-2025-09-12-193052.png">
+        <p class="descrizione">
+          Mentre uno di loro picchia il compagno che ha fatto il complimento alla ragazza, il terzo in comodo spiega che è successo dopo che aveva assaltato una nave mercantile.<br>
+          Essi avevano recuperato un bel bottino ed erano sicuri di ricevere dal loro capitano Buggy una grande ricompensa.<br>
+          Vicino a loro trovano una ragazza dai capelli rossi svenuta in una piccola nave.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/DZKjHs5n/Screenshot-2025-09-12-193544.png">
+        <p class="descrizione">
+          I 3 si avvicinano e notano una ragazza molto stanca persa nel mare.<br>
+          Ella chiede a loro di passarle dell'acqua o del pane, in cambio gli avrebbe dato il suo tesoro.<br>
+          I sottoposti di Buggy decidono di aiutarla, ma prima vogliono sbirciare il baule.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/28nbGZMC/Screenshot-2025-09-12-193950.png">
+        <p class="descrizione">
+          La ragazza dice a loro di prendere quello che vogliono, a patto che le diano dell'acqua.<br>
+          I pirati vanno a guardare il tesoro e lei, nel mentre, gli ruba la nave svelando che li ha fregati.<br>
+          Lei parte e li lascia dentro una nave con un baule vuoto.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 12 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/ZbH5bhvF/Screenshot-2025-09-12-194318.png">
+        <p class="descrizione">
+          Poco dopo una piccola tempesta. la ragazza afferma che, quando ci sono questo genere di tempeste, le piccole imbarcazioni devono stare attente al ribalmento.<br>
+          La nave affonda e lei parte via.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 13 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/Jr1gjsPJ/Screenshot-2025-09-12-194916.png">
+        <p class="descrizione">
+          Zolo, dal loro racconto, ha capito che quella potrebbe essere un'ottima navigatrice.<br>
+          I 3 vogliono vendicarsi, ma hanno anche paura della reazione del capitano Buggy se sapesse che loro hanno perso il tesoro.<br>
+          Zolo chiede chi è Buggy e loro rispondono che è un pericolosissimo pirata che ha mangiato un frutto del diavolo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 14 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/0y2yJkMC/Screenshot-2025-09-12-195313.png">
+        <p class="descrizione">
+          Vediamo una grandissima con una prua rappresentante uno strano elefante.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 15 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/76Y8YVBP/Screenshot-2025-09-12-195520.png">
+        <p class="descrizione">
+          Vediamo la ragazza del flashback che scappa con la mappa della Grand Line.<br>
+          I sottoposti di Buggy, ai quali ha rubato la mappa, la inseguono perchè sennò verranno uccisi da una palla di cannone.<br>
+          Nel mentre Luffy raggiunge la stessa città e viene avvistato da un altro ssottoposto di Buggy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 16 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/qB31d6r6/Screenshot-2025-09-12-200324.png">
+        <p class="descrizione">
+          Luffy viene colpito da una palla di cannone e cade a terra.<br>
+          Questo distrae tutti(che si sorprendono che un bambino venga dal cielo) ma Luffy sembra non aver avuto danni.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 17 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/QtSdydM6/Screenshot-2025-09-12-200803.png">
+        <p class="descrizione">
+          Tutti sono sorpresi del fatto che Luffy tankano senza danni.<br>
+          La ragazza finge di essere una sua sottoposta e scappa via.<br>
+          I pirati di Buggy a quel punto si interessano a Luffy visto che, essendo il boss, vale di più.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 18 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/mbXQmYqN/Screenshot-2025-09-12-201219.png">
+        <p class="descrizione">
+          Uno di loro sfida Luffy facendogli volare il cappello di paglia ed egli lo oneshotta con un pugno dicendogli di non toccare il suo tesoro.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 19 -->
+    <div class="slide">
+      <div class="container">
+        <img src="https://i.postimg.cc/6qCNyCjb/Screenshot-2025-09-12-201537.png">
+        <p class="descrizione">
+          Luffy manda k.o. gli altri pirati rimanenti e la ragazza si complimenta con lui.<br>
+          IL ragazzo le chiede chi lei sia ed essa risponde di essere una ladra specializzata nel derubare i pirati. gli chiede di fare a team con lei.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      currentIndex = index;
+      carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+    }
+
+    function prevSlide() { showSlide(currentIndex - 1); }
+    function nextSlide() { showSlide(currentIndex + 1); }
+  </script>
+</body>
+</html>

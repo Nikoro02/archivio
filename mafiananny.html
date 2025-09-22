@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mafia Nanny</title>
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("https://i.postimg.cc/3xR8K52s/Screenshot-2025-09-21-215044.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100vh - 140px);
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 90%;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container a img {
+    width: 300px;
+    height: auto; /* mantiene le proporzioni */
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.container a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.descrizione {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    max-width: 400px;
+    margin: 0;
+}
+
+.paginatore {
+    text-align: center;
+    margin: 15px;
+}
+.paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.paginatore button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+.link-label1 {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>The Mafia Nanny</h1>
+<div class="carousel" id="carousel">
+<div class="slide">
+      <div class="container">
+        <div class="gif-links">
+          <a href="mafiannany1.html">
+            <img src="https://i.postimg.cc/52Qx8LpP/Screenshot-2025-09-21-215258.png" alt="Riassunti Manga"></a>
+            <span class="link-label1">Episodio 1</span>
+         
+        </div>
+      </div>
+    </div>
+</body>
+</html>

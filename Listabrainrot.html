@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brainrot</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.postimg.cc/SxdsfMG2/Screenshot-2025-09-20-102034.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100vh - 120px);
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* immagine sopra, testo sotto */
+    align-items: center; 
+    justify-content: center;
+    gap: 15px; /* distanza tra immagine e testo */
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+.container img {
+    max-width: 600px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white;
+}
+
+.link-label1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.paginatore {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none; /* non blocca clic sul carousel */
+}
+
+.paginatore button {
+    pointer-events: all; /* i bottoni restano cliccabili */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 18px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.paginatore button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(255,255,255,0.7);
+}
+.container img.zoomed {
+    max-width: 1000px; /* più grande del normale */
+    width: auto;
+    height: auto;
+    transform: scale(1.2); /* zoom immediato */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container img.zoomed:hover {
+    transform: scale(1.25); /* leggero ulteriore zoom al passaggio del mouse */
+    box-shadow: 0 0 40px white;
+}
+</style>
+</head>
+<body>
+
+<h1>Brainrot Lista</h1>
+
+<div class="carousel" id="carousel">
+
+<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/mg0sSB59/Screenshot-2025-09-20-184236.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Strawberry Elephant</span>
+        </div>
+    </div>
+    <!-- SLIDE 1 -->
+    <div class="slide">
+        <div class="container">
+            <a href="Trallelo.html">
+                <img src="https://i.postimg.cc/KFQ1CSxm/Screenshot-2025-09-20-102350.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Trallelo Trallalà</span>
+        </div>
+    </div>
+	 <div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/BQc9dbCc/Screenshot-2025-09-20-150856.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Frigo Camello</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/HnNmG6wZ/Screenshot-2025-09-20-185301.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Ecco Cavallo Virtuoso </span>
+        </div>
+    </div>
+	  <div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/3wMYjmS7/Screenshot-2025-09-20-184923.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Bobrito Bandito</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/QNYLrVgK/Screenshot-2025-09-20-191805.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Cocofanto Elenfanto</span>
+        </div>
+    </div>
+  <div class="slide">
+        <div class="container">
+            <a href="Combinazionebrainrot.html">
+                <img src="https://i.postimg.cc/tTbc5sRf/Screenshot-2025-09-20-105204.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Trippa Troppa Tralala Liri Lirà Tung Tung Sahur Boneca Tung Tung Tralalelo Trippi Troppa Crocodina</span>
+        </div>
+    </div>
+		<div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/W3GbkQWV/Screenshot-2025-09-20-183002.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Frullì Frullà</span>
+        </div>
+    </div>
+
+ <div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/rmSMqf9P/Screenshot-2025-09-20-143952.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">MATTEOOOOOOOOOOOOOOO</span>
+        </div>
+    </div>
+	  <div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/ZRhWK01Y/Screenshot-2025-09-20-150424.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Tung Tung Tung Tung Tung Sahur</span>
+        </div>
+    </div>
+
+	
+	<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/CK5NHr1n/Screenshot-2025-09-20-150056.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">U Din Din Din Din Dun Ma Din Din Din Dun</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/j2cj4fLh/Screenshot-2025-09-20-192159.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Tigrrullini Watermellini </span>
+        </div>
+    </div>
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/fLPcBFDP/Screenshot-2025-09-20-102615.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Pippi Potato</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/FzNCvVfQ/Screenshot-2025-09-20-191432.png" alt="Volume 1">
+            </a>
+            <span class="link-label1"> Pot Hotspot</span>
+        </div>
+    </div>
+ <div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/q7c3K8c6/Screenshot-2025-09-20-151131.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Zibra Zubra Zibralini</span>
+        </div>
+    </div>
+		<div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/yxcyqY8R/Screenshot-2025-09-20-182656.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Cannelloni Dragoni</span>
+        </div>
+    </div>
+<div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/nhS630jD/Screenshot-2025-09-20-183223.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Spaghetti Tualetti</span>
+        </div>
+    </div>
+	  <div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/3wMYjmS7/Screenshot-2025-09-20-184923.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Bobrito Bandito</span>
+        </div>
+    </div>
+	
+    <!-- SLIDE 3 -->
+    <div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/fTHhRfWb/Screenshot-2025-09-20-104912.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Cicletera Bicicletera</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src="https://i.postimg.cc/nLrLNjws/Screenshot-2025-09-20-182358.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Tukano Bananno</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="pippi.html">
+                <img src=" https://i.postimg.cc/cJ3NcFPL/Screenshot-2025-09-20-144159.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Job Job Job Sahur</span>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/nh668TZ9/Screenshot-2025-09-20-184552.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Il Bisonte Giuppitere Giuppitercito </span>
+        </div>
+    </div>
+	  <div class="slide">
+        <div class="container">
+            <a href="Bicicletera.html">
+                <img src="https://i.postimg.cc/ZqX5bBzC/Screenshot-2025-09-20-143744.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Six Seven</span>
+        </div>
+    </div>
+	
+
+</div>
+
+<!-- BOTTONI -->
+<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+</script>
+
+</body>
+</html>
+	<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+</script>
+
+</body>
+</html>

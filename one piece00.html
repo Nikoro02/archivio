@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strong World - Capitolo 0</title>
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("https://i.postimg.cc/F155Gcc7/Screenshot-2025-09-10-162821.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden; /* cambio da auto a hidden */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    min-height: 650px;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* spazio tra immagine e descrizione */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.container img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.descrizione {
+    background: rgba(0, 0, 0, 0.8); /* sfondo più scuro */
+    color: #fff;
+    font-size: 1.2rem; /* più grande */
+    line-height: 1.8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+    max-width: 600px;
+} 
+.slide:nth-child(4) img {
+    max-width: 500px; /* leggermente più grande delle altre (400px) */
+    height: auto;
+}
+.paginatore {
+    text-align: center;
+    margin: 15px;
+    position: fixed; /* mantiene i pulsanti sempre visibili */
+    bottom: 20px;    /* distanza dal fondo */
+    left: 50%;       /* centrato orizzontalmente */
+    transform: translateX(-50%);
+    z-index: 999;    /* davanti a tutto */
+}
+
+.paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.paginatore button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body>
+
+<h1>Capitolo 0 - Strong World</h1>
+
+<div class="carousel" id="carousel">
+
+<!-- Slide 1 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/0vLjpnRt/Screenshot-2025-09-11-192907.png" alt="Prima Pagina">
+    <p class="descrizione">
+      Ambientazione: Quartier Generale della Marina, tre anni prima dell'inizio della Grande Era.<br>
+      Il Grande Ammiraglio Kong convoca il Viceammiraglio Monkey D. Garp per informarlo che nel Nuovo Mondo, precisamente ad Edd Waudd, si sta consumando uno scontro tra i pirati Gold D. Roger e Golden Lion Shiki.<br>
+      Garp, disinteressato a un’altra questione che Kong stava per comunicargli, abbandona bruscamente il suo superiore e, come si evince da un dialogo con Aokiji, ha nuovamente rifiutato la promozione al grado di ammiraglio.<br>
+      Successivamente, chiede al viceammiraglio Tsuru di accompagnarlo per raggiungere Roger e fermarlo definitivamente. Tsuru, preoccupata per il carattere irruento di Garp, rifiuta la richiesta; al momento è presente anche il Viceammiraglio Hogwart D. Saul.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/T2gJLnFR/Screenshot-2025-09-11-193136.png" alt="Seconda Pagina">
+    <p class="descrizione">
+      L’ammiraglio Sengoku ordina con tono deciso a Garp di lasciarlo affrontare personalmente la questione legata a Shiki. <br>
+      Garp, con il suo solito atteggiamento ironico, acconsente prendendolo un po’ in giro, ma rispettando la sua scelta.<br>
+      Poco distante, i viceammiragli Momonga e Yamakaji osservano la scena, convinti che Sengoku e Garp siano pienamente in grado di gestire la situazione con fermezza.<br>
+      La scena si sposta poi a Edd War, dove l’equipaggio di Roger si prepara allo scontro imminente con Shiki. Buggy appare visibilmente preoccupato, conscio della minaccia rappresentata dal nemico. <br>
+      Shanks, invece, mantiene un tono più leggero, prendendolo in giro e sottolineando come il potere di Buggy lo renda immune ai fendenti di spada. Buggy, infastidito, ribatte affermando che possiede comunque altri punti deboli.<br>
+      Non lontano da loro, il dottor Crocus osserva in silenzio e gli viene chiesto come mai Roger combatta nonostante la malattia
+    </p>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/L83Nwj29/Screenshot-2025-09-11-193443.png" alt="Terza Pagina">
+    <p class="descrizione">
+      Crocus,in risposta,afferma che al momento le condizioni di Roger sono stabili. Accanto a lui, Scopper Gaban,commenta che sarebbe comunque impossibile convincere Roger a tirarsi indietro.<br>
+      Poco distante, Silvers Rayleigh, vicecapitano dell’equipaggio, sottolinea che Roger è ormai vicino alla morte.<br>
+      Nel pannel successivo viene rivelata la causa dello scontro: Shiki, storico rivale di Roger, ha proposto un'alleanza.<br>
+      Chiede a Roger di diventare il suo braccio destro per condurre, insieme alla sua imponente flotta, la ricerca di un’arma leggendaria, “capace di distruggere il mondo”, con l’obiettivo di conquistare l’intero pianeta.<br>
+      Roger, tuttavia, respinge l’offerta senza esitazioni. Con tono deciso, dichiara che i piani di conquista di Shiki non lo interessano: vivere libero è ciò che desidera davvero, e un’alleanza del genere lo priverebbe di quella libertà.
+    </p>
+  </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/g2BF19Yk/Screenshot-2025-09-11-193739.png" alt="Quarta Pagina">
+    <p class="descrizione">
+      In risposta a questo rifiuto Shiki,con la sua enorme flotta la cui quantità spaventa perfino Rayleigh, dichiara guerra a Roger<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 5 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/xjRzHgf3/Screenshot-2025-09-11-193955.png" alt="Quinta Pagina">
+    <p class="descrizione">
+      Il narratore ci racconta lo svolgimento della guerra di Ed War.<br>
+      La ciurma di Roger si trovava in svantaggio a causa della netta inferiorità numerica (gli stavano per distruggere la nave), ma un'improvvisa tempesta cambiò le sorti della battaglia: metà della flotta di Shiki venne affondata. <br>
+      Inoltre, lo stesso Leone Dorato fu vittima di un incidente, evento che contribuì ulteriormente alla disfatta delle sue forze. Fu così che la ciurma di Roger riuscì a ottenere la vittoria e, poco dopo, si dileguò.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 6 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/Y2WF9gjt/Screenshot-2025-09-11-194150.png" alt="Sesta Pagina">
+    <p class="descrizione">
+      L’incidente che colpì Shiki fu tanto assurdo quanto grave: un timone gli si conficcò nel cranio durante la tempesta. <br>
+      Il medico che lo visitò spiegò a Indigo, il suo dottore personale, che rimuoverlo sarebbe stato troppo rischioso: l’oggetto aveva raggiunto una profondità tale che l’operazione avrebbe potuto ucciderlo.<br>
+      Due anni dopo, Gol D. Roger raggiunse l’impensabile: divenne il Re dei Pirati. Tuttavia, in modo misterioso, lui e la sua ciurma scomparvero nel nulla.<br>
+      Un anno dopo, però...<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 7 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/y8Fv2dwT/Screenshot-2025-09-11-194900.png" alt="Settima Pagina">
+    <p class="descrizione">
+      "ROGER E' STATO ARRESTATO!" <br>
+      Questa notizia destabilizza il leone dorato , ritenendo impossibile che un uomo così forte venisse sconfitto, e spara al suo sottoposto che riferì questa notizia (credendo, inizialmente, che fosse una bugia). <br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 8 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/GtL6MDMV/Screenshot-2025-09-11-195045.png" alt="Ottava Pagina">
+    <p class="descrizione">
+      Shiki, ritenendo indegna la sua sconfitta, attacca Marineford e uccide una moltitudine di marines.<br>
+      Ritiene ingiusto che della feccia debole come loro sia la responsabile della morte di Roger (ritenendo che, piuttosto, sia lui a doverlo uccidere) <br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 9 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/zBpvVn4G/Screenshot-2025-09-11-195357.png" alt="Nona Pagina">
+    <p class="descrizione">
+      L'ammiraglio Sengoku informa Shiki il leone dorato che Roger verrà giustiziato a Longue town , la citta dove è nato, tra una settimana .<br>
+      Shiki ritiene inglorioso che il re dei pirati venga giustiziato nel mare "dei deboli" e sfida apertamente i due marines. <br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 10 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/LsV2Tj2K/Screenshot-2025-09-11-195548.png" alt="Decima Pagina">
+    <p class="descrizione">
+      Lo scontro Garp & Sengoku contro Shiki ha avuto come vincitore i primi due avendo,però, come conseguenza Marineford distrutta per metà<br>
+      Shiki venne spedito ad Impel down<br>
+    </p>
+  </div>
+</div>
+<!-- Slide 11 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/fRfgJCMd/Screenshot-2025-09-11-195705.png" alt="Undicesima Pagina">
+    <p class="descrizione">
+      Dopo la morte di Gold D. Roger inizierà la Grande Era dei pirati.<br>
+      All'esecuzione di Roger vediamo che sono presenti Gekko Moria, Dragon,Crocodile, Buggy, Doflamingo,Mihawk e Shanks.<br>
+      La notizia della morte di Roger si diffuse per tutto il mondo (vediamo di sfondo anche la mamma di Ace)donando sollievo alla gente.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 12 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/pdhv83r7/Screenshot-2025-09-11-195829.png" alt="Dodicesima Pagina">
+    <p class="descrizione">
+      Re Cobra, ad Alabasta, ci informa dell’inizio di una terribile era (accanto a lui vediamo la regina Titi e Igaram); nella vignetta successiva, i pirati Oimo e Karsee confermano l’arrivo di un numero sempre maggiore di pirati.<br>
+      Nel frattempo, Dorry e Brogy continuano a combattere, mentre Tonjit riflette ancora sul suo sogno di vincere le olimpiadi di trampoli.<br>
+      I sottoposti di Cricket lo informano riguardo al One Piece, il leggendario tesoro scoperto da Gol D. Roger.<br>
+      Il giovane Lucci prosegue i suoi allenamenti, mentre nasce Duval. Boa Hancock, allora ancora bambina, spiega alle sue sorelle che dovranno diventare forti per affrontare i pirati che arriveranno ed entrare nella ciurma<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 13 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/0N496PCh/Screenshot-2025-09-11-200012.png" alt="Tredicesima Pagina">
+    <p class="descrizione">
+      La scena si sposta a Impel Down, più precisamente al sesto livello, dove molti criminali sono estasiati all’idea dell’inizio di una nuova era della pirateria.<br>
+      Shiki, invece, appare depresso all’idea che, con la morte di Roger, inizieranno a emergere molti pirati incompetenti.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 14 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/1RvfGnKN/Screenshot-2025-09-11-200201.png" alt="Quattordicesima Pagina">
+    <p class="descrizione">
+      Due anni dopo, la leggenda della prigione infallibile si infranse... Shiki il Leone Dorato è fuggito da Impel Down!<br>
+      Magellan viene informato che, per liberarsi dalle manette di agalmatolite, si è dovuto tagliare le gambe. <br>
+      Poco dopo, vediamo Hannyabal venire fermato da un uomo misterioso, nascosto nell’ombra…<br>
+      Quest’ultimo gli chiede le sue spade: Oto e Kogarashi.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 15 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/wqPwXF0J/Screenshot-2025-09-11-214339.png" alt="Quindicesima Pagina">
+    <p class="descrizione">
+      Codesto uomo è Shiki!<br>
+      Con tono sarcastico, ringrazia Hannyabal per i due anni trascorsi insieme, poi gli "regala" le sue gambe amputate ed evade dalla prigione.<br>
+      Shiki, che da questo momento sarà ricordato come il primo uomo ad essere riuscito a evadere da Impel Down, si sostituisce le gambe con due spade e dà inizio al suo nuovo viaggio.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 16 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/kJd42ddt/Screenshot-2025-09-11-214624.png" alt="Sedicesima Pagina">
+    <p class="descrizione">
+      Sengoku informa Garp della fuga di Shiki; Garp risponde che dovranno prepararsi a dovere, vista la pericolosità dell’individuo.<br>
+      Poco dopo, Garp si mette a giocare con il neonato Ace. Nella vignetta accanto, vediamo Kōshirō lamentarsi di aver avuto un’erede femmina.<br>
+      Yasopp, invece, si pone il dubbio riguardo a una nave che sta passando vicino al suo villaggio.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 17 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/CYRhw186/Screenshot-2025-09-11-214817.png" alt="Diciasettesima Pagina">
+    <p class="descrizione">
+      Su quella nave è presente Shanks, il quale sta andando in quel villaggio per reclutare un uomo di nome Yasopp.<br>
+      Merry, lì vicino, progetta la Going Merry.<br>
+      Bellmeré promette di catturare Shiki; perfino Zeff mostra disappunto alla notizia della sua fuga.<br>
+      Kureha, nel frattempo, pensa ai suoi clienti.<br>
+      Dalton dice al padre di Wapol che sta viziando troppo suo figlio. Quest’ultimo conferma.<br>
+      Nel frattempo, Nico Robin, all’epoca una bambina, scappa da persone che vogliono catturarla.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 18 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/k4tzQHS1/Screenshot-2025-09-11-214940.png" alt="Diciottesima Pagina">
+    <p class="descrizione">
+      Vediamo la scena in cui Gaimon si incastra nel forziere.<br>
+      Nel frattempo, Tom continua la costruzione del treno marino.<br>
+      Crocus sta per dare una brutta notizia a Laboon riguardo ai Pirati Rumbar, quando poi… vediamo Brook, nella vignetta successiva mentre sta sulla sua nave, esibirsi nelle sue solite acrobazie.<br>
+      Un giovane Hatchan, invece, chiede di Rayleigh, che si trova all’interno del bar.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 19 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/ncd2LkjC/Screenshot-2025-09-11-215108.png" alt="Dicianovesima Pagina">
+    <p class="descrizione">
+      Hatchan arriva da Rayleigh, e vediamo quest’ultimo mentre legge sul giornale della fuga di Shiki, chiedendosi cosa abbia intenzione di fare.<br>
+      Nella vignetta sottostante, vediamo Shiki arrivare sulla Moby Dick, dove sfida verbalmente Barbabianca, sottolineando che, con la morte di Roger, inizierà la sua era.<br>
+      Poco dopo, quando Barbabianca lo minaccia, Shiki afferma di avere intenzione di nascondersi per un po’ e di mettere in atto un piano che metterà in ginocchio il mondo intero.<br>
+      Conclundendosi, così, il capitolo.<br>
+    </p>
+  </div>
+</div>
+
+<!-- Slide 20 -->
+<div class="slide">
+  <div class="container">
+    <img src="https://i.postimg.cc/x1MXZj2n/Screenshot-2025-09-11-215243.png" alt="Ventesima Pagina">
+    <p class="descrizione">
+      Questa è una pagina non canonica, creata appositamente per sponsorizzare il film "Strong World". <br>
+      Shiki, col suo dottore Indigo, si trova a Merville. il dottore afferma come questa isola abbia un equilibrio grazie alle piante e animali presenti (uniche per quell'isola). <br>
+      Poco dopo Shiki gli chiede tra quanto potrà attuare il suo piano, il dottore afferma tra 20 anni. CHE FARA' SHIKI? <br>
+    </p>
+  </div>
+</div>
+
+</div>
+
+<!-- Paginatore -->
+<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+</script>
+
+</body>
+</html>

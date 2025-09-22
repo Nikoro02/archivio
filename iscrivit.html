@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Modulo di Iscrizione</title>
+</head>
+<body>
+  <h2>Iscriviti</h2>
+  <form action="processa_iscrizione.php" method="POST">
+    
+    <!-- Nome -->
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+    
+    <!-- Cognome -->
+    <label for="cognome">Cognome:</label><br>
+    <input type="text" id="cognome" name="cognome" required><br><br>
+    
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <!-- Conferma Password -->
+    <label for="conferma_password">Conferma Password:</label><br>
+    <input type="password" id="conferma_password" name="conferma_password" required><br><br>
+    
+    <!-- Bottone di invio -->
+    <input type="submit" value="Iscriviti">
+  
+  </form>
+</body>
+</html>

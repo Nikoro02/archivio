@@ -1,0 +1,128 @@
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("https://towercitymediavideo.wordpress.com/wp-content/uploads/2020/01/img_1083-1.jpg?w=640");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 5px black;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 50px;
+}
+
+.copertina canvas {
+    width: 500px;
+    height: 750px;
+}
+
+.volumi {
+    display: flex;
+    gap: 50px;
+}
+
+.volumi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.volumi li {
+    margin: 20px 0;
+}
+
+.volumi a {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-decoration: none;
+    font-size: 28px;       /* font più grande */
+    padding: 16px 36px;    /* padding più grande */
+    border-radius: 10px;    /* leggermente più arrotondato */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.volumi a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+<h1>Saga East Blue</h1>
+
+<div class="container">
+    <!-- Immagine con Canvas senza riquadro -->
+    <div class="copertina">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Volumi con bottoni più grandi -->
+    <div class="volumi">
+        <ul>
+            <li><a href="one piece1.html" class="button">Volume 1</a></li>
+            <li><a href="one piece2.html" class="button">Volume 2</a></li>
+            <li><a href="one piece3.html" class="button">Volume 3</a></li>
+            <li><a href="one piece4.html" class="button">Volume 4</a></li>
+            <li><a href="one piece5.html" class="button">Volume 5</a></li>
+            <li><a href="one piece6.html" class="button">Volume 6</a></li>
+        </ul>
+        <ul>
+            <li><a href="one piece7.html" class="button">Volume 7</a></li>
+            <li><a href="one piece8.html" class="button">Volume 8</a></li>
+            <li><a href="one piece9.html" class="button">Volume 9</a></li>
+            <li><a href="one piece10.html" class="button">Volume 10</a></li>
+            <li><a href="one piece11.html" class="button">Volume 11</a></li>
+            <li><a href="one piece12.html" class="button">Volume 12</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+// Rimuove il bianco dall'immagine tramite Canvas
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "https://m.media-amazon.com/images/I/71mwAvj3kQL._UF1000,1000_QL80_.jpg";
+
+img.onload = () => {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    ctx.drawImage(img, 0, 0);
+
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+        if (data[i] > 240 && data[i+1] > 240 && data[i+2] > 240) {
+            data[i+3] = 0;
+        }
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+};
+</script>
+
+</body>
+</html>
+
+

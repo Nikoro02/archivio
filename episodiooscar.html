@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>Episodi Lady Oscar</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("https://i.postimg.cc/ydy7G6B7/Screenshot-2025-09-16-205320.png");
+    background-color: black;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100vh - 120px);
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column; /* immagine sopra, pulsanti sotto */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+  }
+
+  .gif-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+  }
+
+  .gif-item img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gif-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white;
+  }
+
+  .link-label1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+  }
+
+.paginatore {
+  text-align: center;
+  margin-top: -30px; /* li alza verso l’alto */
+}
+.paginatore button {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  margin: 0 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+  .paginatore button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(255,255,255,0.7);
+  }
+</style>
+</head>
+<body>
+<h1>Episodi Lady Oscar</h1>
+
+<div class="carousel" id="carousel">
+
+  <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep1oscar.html">
+        <img src="https://i.postimg.cc/QxJhxdW5/Screenshot-2025-09-16-211429.png" alt="Episodio 1">
+        <span class="link-label1">Episodio 1</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep2oscar.html">
+        <img src="https://i.postimg.cc/d3NbD9Tx/Screenshot-2025-09-17-192548.png" alt="Episodio 2">
+        <span class="link-label1">Episodio 2</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep3oscar.html">
+        <img src="https://i.postimg.cc/FRp2272r/Screenshot-2025-09-17-195816.png" alt="Episodio 3">
+        <span class="link-label1">Episodio 3</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+ 
+ <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep4oscar.html">
+        <img src="https://i.postimg.cc/J0kYgMzj/Screenshot-2025-09-19-154232.png" alt="Episodio 3">
+        <span class="link-label1">Episodio 4</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+  
+   <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep5oscar.html">
+        <img src="https://i.postimg.cc/T2jTp69K/Screenshot-2025-09-19-154748.png" alt="Episodio 3">
+        <span class="link-label1">Episodio 5</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+
+ <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep6oscar.html">
+        <img src="https://i.postimg.cc/fRdV2Fsm/Screenshot-2025-09-19-155315.png" alt="Episodio 3">
+        <span class="link-label1">Episodio 6</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+ <div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep7oscar.html">
+        <img src="https://i.postimg.cc/MKZCSvBx/Screenshot-2025-09-20-183804.png" alt="Episodio 3">
+        <span class="link-label1">Episodio 7</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+<div class="slide">
+    <div class="container">
+      <a class="gif-item" href="ep8oscar.html">
+        <img src="https://i.postimg.cc/BQKZ916h/Screenshot-2025-09-20-190157.png" alt="Episodio 3">
+        <span class="link-label1">Episodio 8</span>
+      </a>
+    </div>
+    <div class="paginatore">
+      <button onclick="prevSlide()">⬅️ Precedente</button>
+      <button onclick="nextSlide()">Successivo ➡️</button>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  if (index < 0) index = 0;
+  if (index >= slides.length) index = slides.length - 1;
+  currentIndex = index;
+  carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+</script>
+
+</body>
+</html>

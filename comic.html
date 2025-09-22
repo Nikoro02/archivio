@@ -1,0 +1,187 @@
+ <html>
+<head>
+<title>Fumetti </title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+ background-image: url("https://i.postimg.cc/FKxnqjcx/fum.gif");
+    background-color: black;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 5px black;
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100vh - 180px);
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px;
+    max-width: 90%;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .gif-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .gif-item {
+    display: flex;
+    flex-direction: column; /* scritta sotto la gif */
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+  }
+
+  .gif-item img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    border: 5px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gif-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px white; /* effetto glow */
+  }
+
+  .link-label1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .paginatore {
+    text-align: center;
+    margin: 15px;
+  }
+
+  .paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .paginatore button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  }
+
+  .pokemon-gif {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .pokemon-gif:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px white;
+  }
+
+</style>
+</head>
+<body>
+<h1>Fumetti </h1>
+
+  <div class="carousel" id="carousel">
+  <div class="slide">
+      <div class="container">
+        <div class="gif-links">
+          <a class="gif-item" href="manga.html">
+            <img src="https://i.postimg.cc/3RTDccmk/c0d037d868e22ca91f9076198038efd3.gif" alt="Riassunti Manga">
+            <span class="link-label1">Manga</span>
+          </a>
+        </div>
+      </div>
+    </div>
+	<div class="slide">
+      <div class="container">
+        <div class="gif-links">
+          <a class="gif-item" href="manwha.html">
+            <img src="https://i.postimg.cc/W1J8XJcW/ww.gif"class="pokemon-gif">
+            <span class="link-label1">Manhwa</span>
+          </a>
+        </div>
+      </div>
+    </div> 
+		<div class="slide">
+      <div class="container">
+        <div class="gif-links">
+          <a class="gif-item" href="manwha.html">
+            <img src="https://i.postimg.cc/7hhf28ST/Dylan-Dog-403-wip.gif"class="pokemon-gif">
+            <span class="link-label1">Fumetti Italiani</span>
+          </a>
+        </div>
+      </div>
+    </div> 
+	</div>
+	<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      currentIndex = index;
+      carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+    }
+
+    function prevSlide() { showSlide(currentIndex - 1); }
+    function nextSlide() { showSlide(currentIndex + 1); }
+  </script>
+</body>
+</html>

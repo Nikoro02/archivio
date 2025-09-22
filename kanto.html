@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokédex di Kanto</title>
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("https://i.postimg.cc/qJmwVL6X/Screenshot-2025-09-10-194517.png");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+p {
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+    max-width: 1000px;
+    line-height: 1.8;
+    margin: 20px 0 10px 0; /* ridotto margine inferiore da 40px a 10px */
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    min-height: 500px;
+    scroll-behavior: smooth;
+    padding: 0;
+
+    /* Nascondi scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 90%;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.container a img {
+    max-width: 600px;
+    max-height: 800px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.paginatore {
+    text-align: center;
+    margin: 15px;
+}
+
+.paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.paginatore button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body>
+
+<h1>Regione di Kanto</h1>
+<p>Il Pokédex di Kanto possiede 151 Pokémon</p>
+
+<div class="carousel" id="carousel">
+
+    <!-- Slide Bulbasaur -->
+    <div class="slide">
+        <div class="container">
+            <a href="bulba.html">
+                <img src="https://i.postimg.cc/CxCtPVVc/Screenshot-2025-09-15-192049.png" alt="Bulbasaur"
+                     onmouseover="playSound('bulbasaur')"
+                     onmouseout="pauseSound('bulbasaur')">
+            </a>
+        </div>
+    </div>
+
+    <!-- Slide Ivysaur -->
+    <div class="slide">
+        <div class="container">
+            <a href="ivysaur.html">
+                <img src="https://i.postimg.cc/jdDdHyZv/Screenshot-2025-09-15-223814.png" alt="Ivysaur"
+                     onmouseover="playSound('ivysaur')"
+                     onmouseout="pauseSound('ivysaur')">
+            </a>
+        </div>
+    </div>
+
+    <!-- Slide Venusaur -->
+    <div class="slide">
+        <div class="container">
+            <a href="venusaur.html">
+                <img src="https://i.postimg.cc/hvTtYm8X/Screenshot-2025-09-16-161743.png" alt="Venusaur"
+                     onmouseover="playSound('venusaur')"
+                     onmouseout="pauseSound('venusaur')">
+            </a>
+        </div>
+    </div>
+
+    <!-- Slide Charmender -->
+    <div class="slide">
+        <div class="container">
+            <a href="charmender.html">
+                <img src="https://i.postimg.cc/YC2V9mnY/Screenshot-2025-09-16-172640.png" alt="Charmender"
+                     onmouseover="playSound('charmender')"
+                     onmouseout="pauseSound('charmender')">
+            </a>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="charmeleon.html">
+                <img src="https://i.postimg.cc/R0tkNnP9/Screenshot-2025-09-18-170104.png" alt="Charmeleon"
+                     onmouseover="playSound('charmeleon')"
+                     onmouseout="pauseSound('charmeleon')">
+            </a>
+        </div>
+    </div>
+	<div class="slide">
+        <div class="container">
+            <a href="charizard.html">
+                <img src="https://i.postimg.cc/d3vjcnt7/Screenshot-2025-09-18-173337.png" alt="Charizard"
+                     onmouseover="playSound('charizard')"
+                     onmouseout="pauseSound('charizard')">
+            </a>
+        </div>
+    </div>
+	
+	<div class="slide">
+        <div class="container">
+            <a href="squirtle.html">
+                <img src="https://i.postimg.cc/9MbfY4B7/Screenshot-2025-09-18-180552.png" alt="Squirtle"
+                     onmouseover="playSound('squirtle')"
+                     onmouseout="pauseSound('squirtle')">
+            </a>
+        </div>
+    </div>
+	
+	<div class="slide">
+        <div class="container">
+            <a href="wartotle.html">
+                <img src="https://i.postimg.cc/nzWQdSTD/Screenshot-2025-09-19-161243.png" alt="Squirtle"
+                     onmouseover="playSound('wartotle')"
+                     onmouseout="pauseSound('wartotle')">
+            </a>
+        </div>
+    </div>
+	
+	
+</div>
+
+<!-- Audio files -->
+<audio id="bulbasaur-sound" src="bulbasaur.mp3" preload="auto"></audio>
+<audio id="ivysaur-sound" src="ivysaur.mp3" preload="auto"></audio>
+<audio id="venusaur-sound" src="venusaur.mp3" preload="auto"></audio>
+<audio id="charmender-sound" src="charmender.mp3" preload="auto"></audio>
+<audio id="charmeleon-sound" src="charmeleon.mp3" preload="auto"></audio>
+<audio id="charizard-sound" src="charizard.mp3" preload="auto"></audio>
+<audio id="squirtle-sound" src="squirtle.mp3" preload="auto"></audio>
+<audio id="wartotle-sound" src="wartotle.mp3" preload="auto"></audio>
+
+<!-- Paginatore -->
+<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+// Carosello
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+
+// Funzioni audio
+function playSound(pokemon) {
+    const audio = document.getElementById(`${pokemon}-sound`);
+    if(audio) {
+        audio.currentTime = 0;
+        audio.play().catch(err => console.log("Errore audio:", err));
+    }
+}
+
+function pauseSound(pokemon) {
+    const audio = document.getElementById(`${pokemon}-sound`);
+    if(audio) {
+        audio.pause();
+        audio.currentTime = 0;
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dorry, The Blue Ogre</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.postimg.cc/vBmgSYbT/Screenshot-2025-09-19-171104.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100vh - 120px);
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* immagine sopra, testo sotto */
+    align-items: center; 
+    justify-content: center;
+    gap: 15px; /* distanza tra immagine e testo */
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+.container img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white;
+}
+
+.link-label1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.paginatore {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.paginatore button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 18px 36px;
+    margin: 0 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.paginatore button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(255,255,255,0.7);
+}
+</style>
+</head>
+<body>
+
+<h1>Dorry, The Blue Ogre</h1>
+
+<div class="carousel" id="carousel">
+
+    <!-- Slide 1 -->
+    <div class="slide">
+        <div class="container">
+            <a href="storiaroger.html">
+                <img src="https://i.postimg.cc/fbG9ZZ85/Screenshot-2025-09-19-173358.png" alt="Volume 1">
+            </a>
+            <span class="link-label1">Storia</span>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="container">
+            <a href="scalingroger.html">
+                <img src="https://i.postimg.cc/Rh7nsfdB/Screenshot-2025-09-19-172355.png" alt="Volume 2">
+            </a>
+            <span class="link-label1">Feats e statements</span>
+        </div>
+    </div>
+	
+	
+<!-- Slide 3 -->
+    <div class="slide">
+        <div class="container">
+            <a href="tagliadorry.html">
+                <img src="https://i.postimg.cc/3N7B9Khd/Screenshot-2025-09-19-172822.png" alt="Volume 2">
+            </a>
+            <span class="link-label1">Taglia</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="paginatore">
+    <button onclick="prevSlide()">⬅️ Precedente</button>
+    <button onclick="nextSlide()">Successivo ➡️</button>
+</div>
+
+<script>
+const carousel = document.getElementById('carousel');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index < 0) index = 0;
+    if (index >= slides.length) index = slides.length - 1;
+    currentIndex = index;
+    carousel.scrollTo({ left: slides[index].offsetLeft, behavior: 'smooth' });
+}
+
+function prevSlide() { showSlide(currentIndex - 1); }
+function nextSlide() { showSlide(currentIndex + 1); }
+</script>
+
+</body>
+</html>
